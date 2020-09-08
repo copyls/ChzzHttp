@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.github.dcendents.android-maven'
+version = "0.0.1"
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.0"
@@ -31,8 +32,8 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-scalars:2.3.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
 }
-def siteUrl = 'https://github.com/xiaoxinxing12/ChzzUI-Android'      // 项目的主页
-def gitUrl = 'https://github.com/xiaoxinxing12/ChzzUI-Android.git'   // Git仓库的url
+def siteUrl = ''      // 项目的主页
+def gitUrl = ''   // Git仓库的url
 group = "org.chzz" // Maven Group ID for the artifact，一般填你唯一的包名
 artifacts
 install {
@@ -72,14 +73,7 @@ task sourcesJar(type: Jar) {
     classifier = 'sources'
 }
 
-task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = 'javadoc'
-    from javadoc.destinationDir
-}
-artifacts {
-    archives javadocJar
-    archives sourcesJar
-}
+
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
 bintray {
@@ -87,7 +81,7 @@ bintray {
     key = properties.getProperty("bintray.apikey")
     configurations = ['archives']
     pkg {
-        repo = "android"  //发布到Bintray的那个仓库里，默认账户有四个库，我们这里上传到maven库
+        repo = "Android"  //发布到Bintray的那个仓库里，默认账户有四个库，我们这里上传到maven库
         name = "ChzzHttp"  //发布到Bintray上的项目名字
         websiteUrl = siteUrl
         vcsUrl = gitUrl

@@ -4,9 +4,9 @@
 
     ChzzHttp库 把Retrofit2进行再次封装，支持链式调用，方便调用。
 
-    项目地址：""
+    项目地址："https://github.com/copyls/ChzzHttp.git"
 
-    项目依赖：implementation''
+    项目依赖：implementation'implementation 'org.chzz:chzzhttp:0.0.1''
 
 **方便之处**
 

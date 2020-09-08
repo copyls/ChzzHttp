@@ -37,9 +37,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private IDisposeData dataListener = new DisposeDataImpl<UserEntity>() {
+    private IDisposeData dataListener = new DisposeDataImpl<String>() {
         @Override
-        public void onSuccess(UserEntity entity) {
+        public void onSuccess(String entity) {
 
         }
 
