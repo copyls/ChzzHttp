@@ -6,7 +6,7 @@
 
     项目地址："https://github.com/copyls/ChzzHttp.git"
 
-    项目依赖：implementation'implementation 'org.chzz:chzzhttp:0.0.1''
+    项目依赖：implementation 'org.chzz:chzzhttp:0.0.1'
 
 **方便之处**
 
