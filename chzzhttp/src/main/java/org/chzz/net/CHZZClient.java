@@ -33,7 +33,7 @@ public class CHZZClient {
     //请求接口地址
     private final String URL;
     //请求参数  Map<>形式
-    private static Map<String, Object> PARAMS;
+    private  Map<String, Object> PARAMS;
     //开始或结束回调
     private final IRequest REQUEST;
     //请求成功回调

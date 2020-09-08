@@ -49,10 +49,10 @@ public class RequestCallback implements Callback<String> {
                 String msg = "请设置回调接口";
                 if (SUCCESS != null) {
                     try {
-                        if (null == SUCCESS.getEntity()) {
+                        if (SUCCESS.getTClass().getName().equals("java.lang.String")) {
                             SUCCESS.onSuccess(response.body());
                         } else {
-                            SUCCESS.onSuccess(new Gson().fromJson(response.body(), SUCCESS.getEntity().getClass()));
+                            SUCCESS.onSuccess(new Gson().fromJson(response.body(), SUCCESS.getTClass()));
                         }
                     } catch (Exception e) {
                         Toast.makeText(Chzz.getApplication(), e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
@@ -62,10 +62,10 @@ public class RequestCallback implements Callback<String> {
                 //统一处理
                 if (IDisposeData != null) {
                     try {
-                        if (null == IDisposeData.getEntity()) {
+                        if (IDisposeData.getTClass().getName().equals("java.lang.String")) {
                             IDisposeData.onSuccess(response.body());
                         } else {
-                            IDisposeData.onSuccess(new Gson().fromJson(response.body(), IDisposeData.getEntity().getClass()));
+                            IDisposeData.onSuccess(new Gson().fromJson(response.body(), IDisposeData.getTClass()));
                         }
                     } catch (Exception e) {
                         Toast.makeText(Chzz.getApplication(), e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();

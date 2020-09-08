@@ -2,7 +2,7 @@ package org.chzz.net.callback;
 
 public interface IDisposeData<T> {
 
-    T getEntity();
+    Class<T> getTClass();
 
     /**
      * 请求成功回调事件处理

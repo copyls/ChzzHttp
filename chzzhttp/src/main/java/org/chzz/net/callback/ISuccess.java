@@ -10,5 +10,5 @@ package org.chzz.net.callback;
 public interface ISuccess<T> {
     void onSuccess(T entity);
 
-    T getEntity();
+    Class<T> getTClass();
 }

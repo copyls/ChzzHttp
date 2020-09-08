@@ -11,7 +11,7 @@ public class App extends Application {
         super.onCreate();
         //初始化所有配置
         Chzz.init(this)
-                .withApiHost("http://www.baidu.com")
+                .withApiHost("http://39.97.122.129/")
                 .configure();
     }
 }

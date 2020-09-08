@@ -26,26 +26,27 @@ public class MainActivity extends AppCompatActivity {
 
 
         Map<String, Object> params = new HashMap<String, Object>();
-        params.put("username", "copy");
-        params.put("password", "123456");
+        params.put("mb", "18734924592");
+        params.put("pwd", "999999q");
         CHZZClient.builder()
                 .params(params)
-                .url("/userLogin")
+                .url("module_voice/login_phone")
                 .disposeData(dataListener)
                 .build()
                 .get();
 
     }
 
-    private IDisposeData dataListener = new DisposeDataImpl<String>() {
+    private IDisposeData dataListener = new DisposeDataImpl<User>() {
         @Override
-        public void onSuccess(String entity) {
+        public void onSuccess(User entity) {
 
+            Log.i("CHZZ","------"+entity.emsg);
         }
 
         @Override
         public void onFailure(int code, String msg) {
-
+            Log.i("CHZZ",msg);
         }
     };
 }
