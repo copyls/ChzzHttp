@@ -5,7 +5,7 @@ android {
     buildToolsVersion "29.0.0"
     defaultConfig {
         applicationId "org.chzz.net.demo"
-        minSdkVersion 14
+        minSdkVersion 20
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -27,4 +27,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     compile project(path: ':chzzhttp')
+
+    api 'com.tencent.tbs.tbssdk:sdk:43939'
+    api 'org.jsoup:jsoup:1.10.3'
 }

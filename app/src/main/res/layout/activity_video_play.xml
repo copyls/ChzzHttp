@@ -3,34 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
-
-
-    <RelativeLayout
+    android:layout_height="match_parent"
+    tools:context=".VideoPlayActivity">
+    <org.chzz.net.demo.X5WebView
+        android:id="@+id/x5_webview"
         android:layout_width="match_parent"
-        android:layout_height="0px"
-        android:layout_weight="3">>
-
-        <com.tencent.smtt.sdk.WebView
-            android:id="@+id/forum_context"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TextView
-            android:id="@+id/iv_loading"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_centerInParent="true"
-            android:visibility="gone"
-            android:background="#000" />
-    </RelativeLayout>
-
+        android:layout_height="200dp"
+        android:scrollbars="none" />
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0px"
-        android:layout_weight="8">
+        android:layout_height="match_parent"
+       >
 
         <Button
             android:id="@+id/but_1"
@@ -57,9 +41,4 @@
             android:text="3" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/but_video"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="but_video" />
 </LinearLayout>
